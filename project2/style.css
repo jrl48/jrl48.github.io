@@ -18,6 +18,11 @@ h1 {
     padding-bottom: 0;
 }
 
+.header {
+    color: #7dce94;
+    font-size: 40;
+}
+
 .navbar {
     position: absolute;
     top: 20;
@@ -47,6 +52,10 @@ h1 {
     font-style: italic;
 }
 
+#upcoming {
+    font-size: 36;
+}
+
 .entry {
     margin: 80 200;
 }
@@ -56,4 +65,20 @@ h1 {
     margin: 150 150;
     align-self: auto;
     justify-content: space-between;
+    border-width: 0px;
+    border-color: saddlebrown;
+}
+
+table {
+    border-width: 5px;
+    border-style: groove;
+    margin-bottom: 20;
+}
+
+.matchups {
+    border-color: saddlebrown;
+    border-style: double;
+    border-width: 20px;
+    text-align: center;
+    margin: 80 200;
 }
