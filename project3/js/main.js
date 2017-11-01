@@ -73,3 +73,26 @@ function p5e() {
     var x = document.getElementById("p5x").value;
     document.getElementById("p5").innerHTML = p5f(x);
 }
+
+// p6
+function updatePage(event) {
+    var element = event.target, old_color, old_next_color;
+    if (element.nextElementSibling !== null) {
+        element.nextElementSibling.style.backgroundColor = "blue";
+        setTimeout(function () {element.nextElementSibling.style.backgroundColor = ''; }, 200);
+    } else {
+        element.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = "red";
+        element.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = "red";
+        element.previousElementSibling.previousElementSibling.style.backgroundColor = "red";
+        element.previousElementSibling.style.backgroundColor = "red";
+        element.style.backgroundColor = "red";
+        setTimeout(function () {
+            element.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = '';
+            element.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = '';
+            element.previousElementSibling.previousElementSibling.style.backgroundColor = '';
+            element.previousElementSibling.style.backgroundColor = '';
+            element.style.backgroundColor = '';
+        }, 200);
+    }
+    
+}
