@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JQuery Project</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <script src="js/jquery-2.1.4.min.js"></script>
+    </head>
+    <body>
+        <h1>JQuery Programming Problems</h1>
+        
+        <h3>P1:</h3>
+        <p>
+            Enter a number: <input id="p1in" type="number" value="0"/> <button onclick="p1e()">Enter</button>
+        </p>
+        <p>f(x) = 5x-3x^2+13 = </p>
+        <p id="p1"></p>
+        
+        <h3>P2:</h3>
+        <p>
+            Enter 3 Strings: <input id="p2x" type="text" value="John"/>
+                             <input id="p2y" type="text" value="Jacob"/>
+                             <input id="p2z" type="text" value="Smith"/>
+                             <button onclick="p2e()">Enter</button>
+        </p>
+        <h4 id="p2"></h4>
+        
+        <h3>P3:</h3>
+        <p>
+            Enter 2 Numbers: <input id="p3x" type="number" value="2"/><input id="p3y" type="number" value="1"/>
+                             <button onclick="p3e()">Enter</button>
+        </p>
+        <p id="p3"></p>
+        
+        <h3>P4:</h3>
+        <p>
+            Enter a String: <input id="p4x" type="text" value="(123) 456-7890"/>
+                            <button onclick="p4e()">Enter</button>
+        </p>
+        <h4 id="p4"></h4>
+        
+        <h3>P5:</h3>
+        <p>Enter a Comma Separated List: <input id="p5x" type="text" value="apples, bananas, oranges, pears, peaches, pineapple"/>
+                                         <button onclick="p5e()">Enter</button></p>
+        <p id="p5"></p>
+        
+        <h3>P6:</h3>
+        <div class="DOM">
+            <button onclick="updatePage(event)">1</button>
+            <button onclick="updatePage(event)">2</button>
+            <button onclick="updatePage(event)">3</button>
+            <button onclick="updatePage(event)">4</button>
+            <button onclick="updatePage(event)">5</button>
+        </div>
+        <script src="js/main.js"></script>
+    </body>            
+</html>
