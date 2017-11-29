@@ -1,7 +1,3 @@
-$(function () {
-    $("h1").html("updated");
-});
-
 // p1
 function p1f(x) {
     return 5 * x - 3 * (x * x) + 13;
@@ -43,9 +39,9 @@ function p3f(x, y) {
 }
 
 function p3e() {
-    var x = document.getElementById("p3x").value,
-        y = document.getElementById("p3y").value;
-    document.getElementById("p3").innerHTML = p3f(x, y);
+    var x = $("#p3x").val(),
+        y = $("#p3y").val();
+    $("#p3").html(p3f(parseFloat(x), parseFloat(y)));
 }
 
 // p4
@@ -62,8 +58,8 @@ function p4f(x) {
 }
 
 function p4e() {
-    var x = document.getElementById("p4x").value;
-    document.getElementById("p4").innerHTML = p4f(x);
+    var x = $("#p4x").val();
+    $("#p4").html(p4f(x));
 }
 
 // p5
@@ -73,29 +69,30 @@ function p5f(x) {
 }
 
 function p5e() {
-    var x = document.getElementById("p5x").value;
-    document.getElementById("p5").innerHTML = p5f(x);
+    var x = $("#p5x").val();
+    $("#p5").html(p5f(x));
 }
 
 // p6
+
 function updatePage(event) {
-    var element = event.target, old_color, old_next_color;
-    if (element.nextElementSibling !== null) {
-        element.nextElementSibling.style.backgroundColor = "blue";
-        setTimeout(function () {element.nextElementSibling.style.backgroundColor = ''; }, 200);
+    var element = $(event.target), old_color, old_next_color;
+    if (element.next().is('button')) {
+        element.next().css("background-color", "blue");
+        setTimeout(function () {element.next().css("background-color", ''); }, 1000);
     } else {
-        element.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = "red";
-        element.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = "red";
-        element.previousElementSibling.previousElementSibling.style.backgroundColor = "red";
-        element.previousElementSibling.style.backgroundColor = "red";
-        element.style.backgroundColor = "red";
+        element.prev().prev().prev().prev().css("background-color", "red");
+        element.prev().prev().prev().css("background-color", "red");
+        element.prev().prev().css("background-color", "red");
+        element.prev().css("background-color", "red");
+        element.css("background-color", "red");
         setTimeout(function () {
-            element.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = '';
-            element.previousElementSibling.previousElementSibling.previousElementSibling.style.backgroundColor = '';
-            element.previousElementSibling.previousElementSibling.style.backgroundColor = '';
-            element.previousElementSibling.style.backgroundColor = '';
-            element.style.backgroundColor = '';
-        }, 200);
+            element.prev().prev().prev().prev().css("background-color", '');
+            element.prev().prev().prev().css("background-color", '');
+            element.prev().prev().css("background-color", '');
+            element.prev().css("background-color", '');
+            element.css("background-color", '');
+        }, 1000);
     }
     
 }
